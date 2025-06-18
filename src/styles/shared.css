@@ -1,0 +1,254 @@
+/* SharedLayout.css */
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f3f4f6;
+}
+
+/* Header - Mobile First */
+.header {
+  background: linear-gradient(to right, #991b1b, #dc2626);
+  color: white;
+  padding: 1rem;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.avatar {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #991b1b;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.full-name {
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+.user-points {
+  font-size: 0.8rem;
+  opacity: 0.9;
+  line-height: 1.2;
+}
+
+.date-section {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.calendar-icon {
+  font-size: 1.2rem;
+}
+
+.date-info {
+  text-align: right;
+}
+
+.date {
+  font-weight: bold;
+  font-size: 0.9rem;
+  line-height: 1.2;
+}
+
+.day {
+  font-size: 0.7rem;
+  opacity: 0.9;
+  line-height: 1.2;
+}
+
+/* Navigation - Mobile First */
+.navigation {
+  background: linear-gradient(to right, #991b1b, #dc2626);
+  padding: 0 1rem 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-content {
+  width: 100%;
+}
+
+.nav-tabs {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.nav-tab {
+  padding: 0.5rem 1.5rem;
+  border-radius: 1rem 1rem 0 0;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.nav-tab.active {
+  background-color: white;
+  color: #374151;
+}
+
+.nav-tab:not(.active) {
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: transparent;
+}
+
+.nav-tab:not(.active):hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Main Content - Mobile First */
+.main-content {
+  flex: 1;
+  padding: 2rem 1rem;
+  width: 100%;
+  min-width: 0;
+}
+
+/* Footer */
+.footer {
+  background: linear-gradient(to right, #991b1b, #dc2626);
+  color: white;
+  padding: 2rem 1rem;
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 800px;
+  width: 100%;
+}
+
+.footer-text {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  line-height: 1.5;
+}
+
+.footer-copyright {
+  font-size: 0.75rem;
+  opacity: 0.7;
+  margin-top: 0.5rem;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .header {
+    padding: 1.25rem 1.5rem;
+  }
+  
+  .avatar {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.25rem;
+  }
+  
+  .full-name {
+    font-size: 1.1rem;
+  }
+  
+  .user-points {
+    font-size: 0.875rem;
+  }
+  
+  .date {
+    font-size: 1rem;
+  }
+  
+  .day {
+    font-size: 0.75rem;
+  }
+  
+  .navigation {
+    padding: 0 1.5rem 1.25rem;
+  }
+  
+  .nav-tab {
+    padding: 0.5rem 2rem;
+    font-size: 1rem;
+  }
+  
+  .main-content {
+    padding: 2rem 1.5rem;
+  }
+  
+  .footer {
+    padding: 2.5rem 1.5rem;
+  }
+  
+  .footer-text {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .main-content {
+    padding: 3rem 2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header-content,
+  .nav-content {
+    width: 100%;
+    padding: 0 2rem;
+  }
+  
+  .footer {
+    padding: 3rem 2rem;
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}

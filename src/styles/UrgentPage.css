@@ -1,0 +1,133 @@
+.urgent-donation-container {
+  min-height: 100vh;
+  background-color: #f9fafb;
+  padding: 1rem;
+}
+
+.urgent-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-top: 1rem;
+}
+
+.urgent-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.urgent-card-container {
+  max-width: 24rem;
+  margin: 0 auto;
+}
+
+.urgent-card {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  border: none;
+  border-radius: 0.5rem;
+  background: white;
+}
+
+.urgent-card-content {
+  padding: 1.5rem;
+}
+
+.urgent-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.urgent-info-item:last-of-type {
+  margin-bottom: 0;
+}
+
+.urgent-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #dc2626;
+  flex-shrink: 0;
+  margin-top: 0.125rem;
+}
+
+.urgent-hospital-name {
+  color: #111827;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.urgent-info-text {
+  color: #374151;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.urgent-button-container {
+  padding-top: 1rem;
+  margin-top: 1.5rem;
+  border-top: 1px solid #f3f4f6;
+}
+
+.urgent-apply-button {
+  width: 100%;
+  background-color: #dc2626;
+  border: none;
+  color: white;
+  font-weight: 500;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+  text-align: center;
+}
+
+.urgent-apply-button:hover {
+  background-color: #b91c1c;
+}
+
+.urgent-apply-button:focus {
+  outline: 2px solid #dc2626;
+  outline-offset: 2px;
+}
+
+.urgent-back-container {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.urgent-back-button {
+  background: transparent;
+  border: none;
+  color: #6b7280;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  transition: color 0.2s ease;
+}
+
+.urgent-back-button:hover {
+  color: #374151;
+}
+
+.urgent-back-button:focus {
+  outline: 2px solid #6b7280;
+  outline-offset: 2px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .urgent-donation-container {
+    padding: 0.5rem;
+  }
+
+  .urgent-card-container {
+    max-width: 100%;
+  }
+
+  .urgent-card-content {
+    padding: 1.25rem;
+  }
+}
