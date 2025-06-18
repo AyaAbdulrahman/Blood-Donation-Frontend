@@ -1,26 +1,26 @@
 
 # 🩸 Blood Donation Frontend System
 
-This is the frontend of the Blood Donation Management System built with **React.js**. It supports user registration, login, profile editing, appointment booking, and management by both donors and blood donation centers.
+This is the frontend of the Blood Donation Management System built with **React.js**. It supports user registration, login, profile editing, appointment booking, and management by both donors and blood donation centers. It uses Reactbootstrap UI.
 
 ---
 
 ## 🚀 Features
 
-### 👤 Donor Portal
+### 👤 Donor 
 - View available and urgent donation requests
 - Apply for appointments
 - Check appointment status
 - View and edit personal profile
 
-### 🏥 Center Dashboard
+### 🏥 Donation Center Dashboard
 - Manage posts and campaigns
 - View and respond to donor appointments
 - Visual dashboard with appointment status chart (Recharts)
 
 ### 🌐 Pages
 - `Home`: Welcome page
-- `Login / Register`: Auth system (static user for now)
+- `Login / Register`: Auth system 
 - `AvailableDonations`: Lists normal donation opportunities
 - `UrgentDonations`: Displays urgent donation needs
 - `CheckStatus`: Tracks donation request applications
@@ -41,22 +41,47 @@ This is the frontend of the Blood Donation Management System built with **React.
 
 ## 📁 Project Structure
 
+
 ```
 /src
   ├── components/
-  │   ├── AvailableDonations.jsx
-  │   ├── UrgentDonations.jsx
-  │   ├── CheckStatus.jsx
-  │   ├── Profile.jsx
-  │   ├── EditProfile.jsx
-  │   ├── CenterMain.jsx
-  │   └── ...
-  ├── styles/
-  ├── assets/
-  ├── App.js
-  ├── main.jsx
-```
+  │   ├── BloodRequestList.jsx
+  │   ├── DonorSignIn.jsx
+  │   ├── DonorSignUp.jsx
+  │   └── Shared.jsx
 
+  ├── pages/
+  │   ├── AddCampaign.jsx
+  │   ├── AddPost.jsx
+  │   ├── AvailableDonation.jsx
+  │   ├── CenterMain.jsx
+  │   ├── CheckStatus.jsx
+  │   ├── DonorCampaigns.jsx
+  │   ├── DonorMain.jsx
+  │   ├── EditProfile.jsx
+  │   ├── Home.jsx
+  │   ├── ManageReq.jsx
+  │   ├── Profile.jsx
+  │   └── UrgentDonation.jsx
+
+  ├── styles/
+  │   ├── AddCampaign.css
+  │   ├── AddPost.css
+  │   ├── Auth.css
+  │   ├── AvailableDonation.css
+  │   ├── CenterMain.css
+  │   ├── DonorCampaign.css
+  │   ├── DonorMain.css
+  │   ├── EditProfile.css
+  │   ├── Home.css
+  │   ├── ManageReq.css
+  │   ├── Profile.css
+  │   ├── shared.css
+  │   └── UrgentPage.css
+
+  ├── App.js
+  └── main.jsx
+```
 ---
 
 ## 📊 Charts
@@ -94,6 +119,6 @@ npm install
 npm run dev
 ```
 
-Make sure to have the backend server running in parallel on port `5000`.
+
 
 ---
