@@ -20,16 +20,14 @@ const Home = () => {
           <p>Are you a...</p>
 
           {/* Pass donor role to signup */}
-          <button onClick={() => navigate("/donor-main", { state: { role: "donor" } })}>
+          <button onClick={() => navigate("/signin", { state: { role: "donor" } })}>
             Donor
           </button>
 
-          <p>or a...</p>
-
-          {/* Pass center role to login */}
-          <button onClick={() => navigate("/center-main", { state: { role: "center" } })}>
-            Center
+          <button onClick={() => navigate("/center-signin")}>
+          Center
           </button>
+
         </div>
       </div>
 

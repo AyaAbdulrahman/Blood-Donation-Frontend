@@ -60,7 +60,9 @@ const CenterMain = () => {
             <div className="full-name">{centers.center_name}</div>
           </div>
         </div>
-        <button className="logout-btn">
+        <button className="logout-btn"
+         onClick={() => navigate('/home')}
+        >
           Log out
         </button>
       </header>

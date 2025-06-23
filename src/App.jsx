@@ -4,8 +4,9 @@ import DonorMain from './pages/DonorMain';
 import Profile from './pages/Profile';
 import EditProfile from './pages/EditProfile';
 import UrgentDonation from './pages/UrgentDonation';
-// import DonorSignUp from './components/DonorSignUp'
-// import DonorSignIn from './components/DonorSignIn';
+import DonorSignUp from './components/DonorSignUp'
+import DonorSignIn from './components/DonorSignIn';
+import CenterSignIn from './components/CenterSignIn';
 import DonorCampaigns from './pages/DonorCampaigns';
 import Home from './pages/Home';
 import AvailableDonation from './pages/AvailableDonation';
@@ -20,9 +21,9 @@ function App() {
      <BrowserRouter>
       <Routes>
         {/* Routes without shared layout */}
-        {/* <Route path="/signup" element={<DonorSignUp />} />
-        <Route path="/signin" element={<DonorSignIn />} /> */}
-
+        <Route path="/signup" element={<DonorSignUp />} />
+        <Route path="/signin" element={<DonorSignIn />} />
+        <Route path="/center-signin" element={<CenterSignIn />} />
         <Route path="/home" element = {<Home />} /> 
 
         {/* Routes with shared layout */}

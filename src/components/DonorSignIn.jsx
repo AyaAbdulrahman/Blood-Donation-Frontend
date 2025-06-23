@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Form, Button, Alert } from 'react-bootstrap';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import '../styles/Auth.css'; 
 
 const DonorSignIn = () => {
@@ -8,37 +8,38 @@ const DonorSignIn = () => {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const navigate = useNavigate();
+  
+  const location = useLocation(); 
+  const role = location.state?.role || "donor";
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setError('');
+ const handleSubmit = async (e) => {
+  e.preventDefault();
+  setError("");
 
-    try {
-      const res = await fetch('http://localhost:5000/api/auth/signin', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, password })
-      });
+  try {
+    const res = await fetch("http://localhost:5000/api/auth/signin", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        credential: email,       
+        password,
+        role                     // the role passed from Home
+      })
+    });
 
-      const data = await res.json();
+    const data = await res.json();
 
-      if (!res.ok) {
-        throw new Error(data.message || 'Failed to login');
-      }
-
-      // Optional: Save token or user to localStorage
-      localStorage.setItem('user', JSON.stringify(data.user));
-
-      // Check role and redirect accordingly
-      if (data.user.role === 'donor') {
-        navigate('/dashboard');
-      } else {
-        setError('Unauthorized role');
-      }
-    } catch (err) {
-      setError(err.message);
+    if (!res.ok) {
+      throw new Error(data.message || "Login failed");
     }
-  };
+
+    localStorage.setItem("user", JSON.stringify(data.user));
+    navigate(role === "center" ? "/center-main" : "/donor-main");  // Redirect based on role
+
+  } catch (err) {
+    setError(err.message);
+  }
+};
 
   return (
     <div className="auth-wrapper d-flex justify-content-center align-items-center">
